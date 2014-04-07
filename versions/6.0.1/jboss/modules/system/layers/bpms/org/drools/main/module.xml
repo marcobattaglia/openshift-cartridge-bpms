@@ -2,18 +2,18 @@
 <module xmlns="urn:jboss:module:1.0" name="org.drools">
   <resources>
 
-<resource-root path="drools-templates-6.0.2-redhat-5.jar"/>
-<resource-root path="drools-decisiontables-6.0.2-redhat-5.jar"/>
-<resource-root path="drools-scorecards-6.0.2-redhat-5.jar"/>
-<resource-root path="drools-core-6.0.2-redhat-5.jar"/>
-<resource-root path="drools-persistence-jpa-6.0.2-redhat-5.jar"/>
-<resource-root path="drools-compiler-6.0.2-redhat-5.jar"/>
-<resource-root path="drools-workbench-models-guided-dtable-6.0.2-redhat-5.jar"/>
-<resource-root path="drools-workbench-models-datamodel-api-6.0.2-redhat-5.jar"/>
-<resource-root path="drools-workbench-models-commons-6.0.2-redhat-5.jar"/>
-<resource-root path="drools-workbench-models-guided-template-6.0.2-redhat-5.jar"/>
-<resource-root path="drools-workbench-models-test-scenarios-6.0.2-redhat-5.jar"/>
-<resource-root path="drools-workbench-models-guided-scorecard-6.0.2-redhat-5.jar"/>
+<resource-root path="drools-templates-6.0.2-redhat-6.jar"/>
+<resource-root path="drools-decisiontables-6.0.2-redhat-6.jar"/>
+<resource-root path="drools-scorecards-6.0.2-redhat-6.jar"/>
+<resource-root path="drools-core-6.0.2-redhat-6.jar"/>
+<resource-root path="drools-persistence-jpa-6.0.2-redhat-6.jar"/>
+<resource-root path="drools-compiler-6.0.2-redhat-6.jar"/>
+<resource-root path="drools-workbench-models-guided-dtable-6.0.2-redhat-6.jar"/>
+<resource-root path="drools-workbench-models-datamodel-api-6.0.2-redhat-6.jar"/>
+<resource-root path="drools-workbench-models-commons-6.0.2-redhat-6.jar"/>
+<resource-root path="drools-workbench-models-guided-template-6.0.2-redhat-6.jar"/>
+<resource-root path="drools-workbench-models-test-scenarios-6.0.2-redhat-6.jar"/>
+<resource-root path="drools-workbench-models-guided-scorecard-6.0.2-redhat-6.jar"/>
 
   </resources>
   <dependencies>
@@ -27,6 +27,7 @@
 <module name="javax.transaction.api" export="false"/>
 <module name="javax.xml.bind.api" export="false"/>
 <module name="org.antlr" export="false"/>
+<module name="org.apache.commons.lang" export="false"/>
 <module name="org.apache.poi" export="false"/>
 <module name="org.codehaus.woodstox" export="false"/>
 <module name="org.dom4j" export="false"/>
