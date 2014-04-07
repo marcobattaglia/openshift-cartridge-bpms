@@ -37,12 +37,39 @@
     <system-properties>
        <property name="org.apache.coyote.http11.Http11Protocol.COMPRESSION" value="on"/>
         <!-- BPMS properties -->
-        <property name="org.uberfire.metadata.index.dir"     value="${jboss.server.data.dir}"/>
-        <property name="org.uberfire.nio.git.ssh.cert.dir"   value="${jboss.server.data.dir}"/>
+
+        <!-- Location of the directory .niogit. Default: working directory -->
         <property name="org.uberfire.nio.git.dir"            value="${jboss.server.data.dir}"/>
-        <property name="org.uberfire.nio.git.ssh.enabled"    value="false"/>
-        <property name="org.uberfire.nio.git.daemon.enabled" value="false"/>
-        <property name="org.kie.demo" value="false"/>
+
+        <!-- Place where maven repository folder will be stored. Default: working-directory/repositories/kie -->
+        <property name="org.guvnor.m2repo.dir"               value="${jboss.server.data.dir}/repositories"/>
+
+        <!-- Enables/disables git daemon. -->
+        <property name="org.uberfire.nio.git.daemon.enabled" value="true"/>
+
+        <!-- Set binding address for daemons  -->
+        <property name="org.uberfire.nio.git.daemon.host" value="${env.OPENSHIFT_BPMS_IP}"/>
+        <property name="org.uberfire.nio.git.ssh.host"    value="${env.OPENSHIFT_BPMS_IP}"/>
+
+        <!-- If daemon enabled, uses this property as port number. -->
+        <property name="org.uberfire.nio.git.daemon.port" value="${env.OPENSHIFT_BPMS_INTERNAL_GIT_PORT}"/>
+        <property name="org.uberfire.nio.git.ssh.port"    value="${env.OPENSHIFT_BPMS_INTERNAL_SSH_PORT}"/>
+
+        <!-- If daemon enabled, uses this information to define if it's possible to push (upload) data to git. -->
+        <property name="org.uberfire.nio.git.daemon.upload" value="true"/>
+
+        <!-- Place where lucene .index folder will be stored. Default: working directory -->
+        <property name="org.uberfire.metadata.index.dir"     value="${jboss.server.data.dir}"/>
+
+        <property name="org.uberfire.nio.git.ssh.cert.dir"   value="${jboss.server.data.dir}"/>
+        <property name="org.uberfire.nio.git.ssh.enabled"    value="true"/>
+
+        <!-- Enables external clone of a demo application from github. This System Property takes precedence over org.kie.example. -->
+        <property name="org.kie.demo"    value="false"/>
+
+        <!-- Enables example structure composed by Repository, Organization Unit and Project. -->
+        <property name="org.kie.example" value="false"/>
+
     </system-properties>
 
     <management>
