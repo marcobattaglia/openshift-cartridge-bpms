@@ -1,3 +1,0 @@
-This directory contains all the samples to be installed during cartridge installation in the 'Demo' organization. 
-Each sample will be unzipped and imported as a GIT repository. If the zip contains any war file, they will be also deployed.
-
