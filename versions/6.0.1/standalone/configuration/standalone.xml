@@ -70,6 +70,9 @@
         <!-- Enables example structure composed by Repository, Organization Unit and Project. -->
         <property name="org.kie.example" value="false"/>
 
+        <!-- Automatically load all repositories found in the following directory -->
+        <property name="org.kie.example.repositories" value="${jboss.server.config.dir}/initial"/>
+
     </system-properties>
 
     <management>
