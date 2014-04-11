@@ -86,10 +86,10 @@
             <security-realm name="ApplicationRealm">
                 <authentication>
                     <local default-user="$local" allowed-users="*"/>
-                    <properties path="bpms-users.properties" relative-to="jboss.server.config.dir"/>
+                    <properties path="${env.OPENSHIFT_BPMS_USERS_FILE}" relative-to="jboss.server.config.dir"/>
                 </authentication>
                 <authorization>
-                    <properties path="bpms-roles.properties" relative-to="jboss.server.config.dir"/>
+                    <properties path="${env.OPENSHIFT_BPMS_ROLES_FILE}" relative-to="jboss.server.config.dir"/>
                 </authorization>
             </security-realm>
         </security-realms>
@@ -494,8 +494,8 @@
             <security-domain name="other" cache-type="default">
                 <authentication>
                     <login-module code="UsersRoles" flag="required">
-                        <module-option name="usersProperties" value="${jboss.server.config.dir}/bpms-users.properties"/>
-                        <module-option name="rolesProperties" value="${jboss.server.config.dir}/bpms-roles.properties"/>
+                        <module-option name="usersProperties" value="${jboss.server.config.dir}/${env.OPENSHIFT_BPMS_USERS_FILE}"/>
+                        <module-option name="rolesProperties" value="${jboss.server.config.dir}/${env.OPENSHIFT_BPMS_ROLES_FILE}"/>
                     </login-module>
                 </authentication>
             </security-domain>
@@ -540,8 +540,8 @@
                 <security-domain name="datavirt-idp" cache-type="default">
                     <authentication>
                         <login-module code="UsersRoles" flag="required">
-                            <module-option name="usersProperties" value="${jboss.server.config.dir}/bpms-users.properties"/>
-                            <module-option name="rolesProperties" value="${jboss.server.config.dir}/bpms-roles.properties"/>
+                            <module-option name="usersProperties" value="${jboss.server.config.dir}/${env.OPENSHIFT_BPMS_USERS_FILE}"/>
+                            <module-option name="rolesProperties" value="${jboss.server.config.dir}/${env.OPENSHIFT_BPMS_ROLES_FILE}"/>
                         </login-module>
                     </authentication>
                 </security-domain>
