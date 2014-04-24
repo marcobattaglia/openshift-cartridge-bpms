@@ -73,6 +73,9 @@
         <!-- Automatically load all repositories found in the following directory -->
         <property name="org.kie.example.repositories" value="${jboss.server.config.dir}/initial"/>
 
+        <!-- Set the user home directory in order that the application can load the settings.xml from M2_REPO -->
+        <property name="user.home" value="${env.OPENSHIFT_HOMEDIR}"/>
+
     </system-properties>
 
     <management>
