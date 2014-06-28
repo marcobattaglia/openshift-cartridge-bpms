@@ -130,8 +130,8 @@ pushd $OPENSHIFT_BPMS_DIR/standalone/configuration/initial > /dev/null
   rm *.zip 
   mv *.war ../../deployments/
 # free access to maven2 repo
-sed -i  '/maven2/d' ${OPENSHIFT_BPMS_DIR}/standalone/deployments/business-central.war/WEB-INF/classes/url_filter.yaml
-echo '   - /maven2/**' >> ${OPENSHIFT_BPMS_DIR}/standalone/deployments/business-central.war/WEB-INF/classes/url_filter.yaml
+#sed -i  '/maven2/d' ${OPENSHIFT_BPMS_DIR}/standalone/deployments/business-central.war/WEB-INF/classes/url_filter.yaml
+#echo '   - /maven2/**' >> ${OPENSHIFT_BPMS_DIR}/standalone/deployments/business-central.war/WEB-INF/classes/url_filter.yaml
   ##
   ## FIX localhost references
   ##
@@ -145,7 +145,7 @@ echo '   - /maven2/**' >> ${OPENSHIFT_BPMS_DIR}/standalone/deployments/business-
 popd 1> /dev/null
 
 client_result ""
-client_result "Red Hat JBoss BPM Suite ${version} cartridge installed.  Please make note of these credentials:"
+client_result "Red Hat JBoss BPM Suite ${version} cartridge installed.  Make note of these credentials:"
 client_result ""
 client_result "             BPMS Admin User: $bpmadmin_username"
 client_result "                    Password: $bpmadmin_password"
