@@ -130,7 +130,7 @@ pushd $OPENSHIFT_BPMS_DIR/standalone/configuration/initial > /dev/null
   rm *.zip 
   mv *.war ../../deployments/
 # free access to maven2 repo
-sed -i  '/maven2/d' ../../deployments/business-central.war/WEB-INF/classes/url_filter.yaml
+#sed -i  '/maven2/d' ../../deployments/business-central.war/WEB-INF/classes/url_filter.yaml
 echo '   - /maven2/**' >> ../../deployments/business-central.war/WEB-INF/classes/url_filter.yaml
   ##
   ## FIX localhost references
